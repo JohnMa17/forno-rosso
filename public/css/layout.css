@@ -1,0 +1,17 @@
+/* =============================================================================
+   FORNO ROSSO · css/layout.css
+   Dueño: M03 · Layout y responsive  Rama: feature/m03-layout
+
+   Cómo se acomoda todo en pantalla. Mobile-first: primero el teléfono y
+   después, con @media (min-width: ...), la computadora.
+   Usa SOLO las variables de variables.css.
+   ============================================================================= */
+
+/* TODO M03: .contenedor con max-width: var(--ancho-max) y margin: 0 auto */
+/* TODO M03: header y #nav-principal (en el teléfono los enlaces bajan con flex-wrap) */
+/* TODO M03: portada del inicio y #grid-destacados (3 columnas en computadora) */
+/* TODO M03: #grid-menu con repeat(auto-fit, minmax(...)) */
+/* TODO M03: #detalle-plato a dos columnas en computadora, una en teléfono */
+/* TODO M03: #form-reserva a dos columnas en computadora */
+/* TODO M03: footer */
+/* Probar todo a 360 px de ancho con F12 */

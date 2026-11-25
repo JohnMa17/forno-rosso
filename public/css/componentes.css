@@ -1,0 +1,20 @@
+/* =============================================================================
+   FORNO ROSSO · css/componentes.css
+   Dueño: M02 · Diseño               Rama: feature/m02-diseno
+
+   Piezas que se repiten. Las clases ya están acordadas; el JavaScript las pone
+   y las quita, así que no se pueden cambiar de nombre sin avisar.
+   ============================================================================= */
+
+/* TODO M02: .tarjeta          tarjeta de plato */
+/* TODO M02: .tarjeta-precio   precio dentro de la tarjeta (color de acento) */
+/* TODO M02: .etiqueta         categoría del plato */
+/* TODO M02: .campo            cada campo del formulario (label + input) */
+/* TODO M02: .campo-error      campo con error (borde rojo) */
+/* TODO M02: .error            mensaje de error debajo del campo */
+/* TODO M02: .exito            mensaje de reserva registrada */
+/* TODO M02: .clima            tarjeta del clima */
+/* TODO M02: .activo           botón de filtro activo y enlace actual del nav */
+
+/* Necesaria desde la Fase 0 (la usa M06 para el horario) */
+.oculto { display: none !important; }

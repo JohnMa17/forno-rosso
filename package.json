@@ -1,0 +1,16 @@
+{
+  "name": "forno-rosso",
+  "version": "1.0.0",
+  "description": "Sitio web de la pizzería Forno Rosso · Práctica en equipo ISW-312",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

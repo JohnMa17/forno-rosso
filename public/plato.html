@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- =============================================================================
+     FORNO ROSSO · plato.html
+     Dueño: M01 · Estructura y SEO     Rama: feature/m01-estructura
+
+     Los ids, las clases que ya trae y el data-pagina del body son CONTRATOS:
+     otros módulos los usan. No cambiarlos sin avisar al grupo.
+     Nada de <style>, style="..." ni <script> dentro del HTML (la CSP los bloquea).
+     ============================================================================= -->
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plato · Forno Rosso</title>
+  <meta name="description" content="TODO M01: descripción de la página de detalle.">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <link rel="stylesheet" href="css/layout.css">
+</head>
+<body data-pagina="plato">
+
+  <header>
+    <!-- TODO M01: logo -->
+    <a href="index.html">Forno Rosso</a>
+    <nav id="nav-principal" aria-label="Principal">
+      <a href="index.html">Inicio</a>
+      <a href="menu.html">Menú</a>
+      <a href="reservas.html">Reservas</a>
+      <a href="nosotros.html">Nosotros</a>
+    </nav>
+    <button type="button" id="btn-modo" class="btn-secundario" aria-label="Cambiar modo oscuro">Modo oscuro</button>
+  </header>
+
+  <main class="contenedor">
+    <!-- M05 pinta aquí el plato según ?id= de la URL -->
+    <article id="detalle-plato"></article>
+  </main>
+
+  <footer>
+    <!-- TODO M01: dirección, teléfono y redes -->
+    <p>Forno Rosso</p>
+  </footer>
+
+  <!-- El orden importa: unos archivos usan funciones de otros -->
+  <script src="js/seguridad.js"></script>
+  <script src="js/datos.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/interactividad.js"></script>
+  <script src="js/reservas.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

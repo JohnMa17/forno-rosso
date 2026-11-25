@@ -1,0 +1,22 @@
+/* =============================================================================
+   FORNO ROSSO · css/base.css
+   Dueño: M02 · Diseño               Rama: feature/m02-diseno
+
+   Estilos generales: cuerpo, títulos, enlaces y botones.
+   ============================================================================= */
+
+/* Mínimo para que la Fase 0 se vea legible */
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: var(--fuente-cuerpo);
+  font-size: var(--texto-base);
+  line-height: 1.5;
+  background: var(--color-fondo);
+  color: var(--color-texto);
+}
+
+/* TODO M02:
+   - títulos h1, h2, h3 con la escala tipográfica y --fuente-titulos
+   - enlaces
+   - .btn y .btn-secundario con :hover, :focus-visible y :disabled */

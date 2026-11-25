@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- =============================================================================
+     FORNO ROSSO · menu.html
+     Dueño: M01 · Estructura y SEO     Rama: feature/m01-estructura
+
+     Los ids, las clases que ya trae y el data-pagina del body son CONTRATOS:
+     otros módulos los usan. No cambiarlos sin avisar al grupo.
+     Nada de <style>, style="..." ni <script> dentro del HTML (la CSP los bloquea).
+     ============================================================================= -->
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú · Forno Rosso</title>
+  <meta name="description" content="TODO M01: descripción del menú para Google.">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <link rel="stylesheet" href="css/layout.css">
+</head>
+<body data-pagina="menu">
+
+  <header>
+    <!-- TODO M01: logo -->
+    <a href="index.html">Forno Rosso</a>
+    <nav id="nav-principal" aria-label="Principal">
+      <a href="index.html">Inicio</a>
+      <a href="menu.html">Menú</a>
+      <a href="reservas.html">Reservas</a>
+      <a href="nosotros.html">Nosotros</a>
+    </nav>
+    <button type="button" id="btn-modo" class="btn-secundario" aria-label="Cambiar modo oscuro">Modo oscuro</button>
+  </header>
+
+  <main class="contenedor">
+    <h1>Menú</h1>
+
+    <!-- M05 usa estos botones para filtrar. No cambiar los data-categoria. -->
+    <div id="filtro-categoria">
+      <button type="button" class="btn-secundario activo" data-categoria="todos">Todos</button>
+      <button type="button" class="btn-secundario" data-categoria="pizzas">Pizzas</button>
+      <button type="button" class="btn-secundario" data-categoria="pastas">Pastas</button>
+      <button type="button" class="btn-secundario" data-categoria="bebidas">Bebidas</button>
+    </div>
+
+    <!-- M05 pinta aquí las tarjetas de los platos -->
+    <div id="grid-menu"></div>
+  </main>
+
+  <footer>
+    <!-- TODO M01: dirección, teléfono y redes -->
+    <p>Forno Rosso</p>
+  </footer>
+
+  <!-- El orden importa: unos archivos usan funciones de otros -->
+  <script src="js/seguridad.js"></script>
+  <script src="js/datos.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/interactividad.js"></script>
+  <script src="js/reservas.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
