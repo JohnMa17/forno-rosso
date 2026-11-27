@@ -1,12 +1,4 @@
 <!DOCTYPE html>
-<!-- =============================================================================
-     FORNO ROSSO · nosotros.html
-     Dueño: M01 · Estructura y SEO     Rama: feature/m01-estructura
-
-     Los ids, las clases que ya trae y el data-pagina del body son CONTRATOS:
-     otros módulos los usan. No cambiarlos sin avisar al grupo.
-     Nada de <style>, style="..." ni <script> dentro del HTML (la CSP los bloquea).
-     ============================================================================= -->
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -22,7 +14,6 @@
 <body data-pagina="nosotros">
 
   <header>
-    <!-- TODO M01: logo -->
     <a href="index.html">Forno Rosso</a>
     <nav id="nav-principal" aria-label="Principal">
       <a href="index.html">Inicio</a>
@@ -35,25 +26,21 @@
 
   <main class="contenedor">
     <h1>Nosotros</h1>
-    <!-- TODO M01: historia corta del restaurante -->
-    <p>TODO M01: historia.</p>
+    <p>Fue creado en 1980.</p>
 
-    <!-- M06 usa este botón para mostrar y esconder el horario -->
     <button type="button" id="btn-horario" class="btn-secundario">Ver horario</button>
     <div id="horario" class="oculto">
-      <!-- TODO M01: horario real -->
       <p>Lunes a domingo · 12:00 a 22:00</p>
     </div>
-
-    <!-- TODO M01: dirección, teléfono y redes -->
   </main>
 
   <footer>
-    <!-- TODO M01: dirección, teléfono y redes -->
+    <p>Ave. Barcelo.</p>
+    <p>+1 (829)-204-0655</p>
+    <p>Facebook</p>
     <p>Forno Rosso</p>
   </footer>
 
-  <!-- El orden importa: unos archivos usan funciones de otros -->
   <script src="js/seguridad.js"></script>
   <script src="js/datos.js"></script>
   <script src="js/menu.js"></script>

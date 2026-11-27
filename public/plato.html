@@ -1,12 +1,4 @@
 <!DOCTYPE html>
-<!-- =============================================================================
-     FORNO ROSSO · plato.html
-     Dueño: M01 · Estructura y SEO     Rama: feature/m01-estructura
-
-     Los ids, las clases que ya trae y el data-pagina del body son CONTRATOS:
-     otros módulos los usan. No cambiarlos sin avisar al grupo.
-     Nada de <style>, style="..." ni <script> dentro del HTML (la CSP los bloquea).
-     ============================================================================= -->
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -22,7 +14,6 @@
 <body data-pagina="plato">
 
   <header>
-    <!-- TODO M01: logo -->
     <a href="index.html">Forno Rosso</a>
     <nav id="nav-principal" aria-label="Principal">
       <a href="index.html">Inicio</a>
@@ -34,16 +25,18 @@
   </header>
 
   <main class="contenedor">
-    <!-- M05 pinta aquí el plato según ?id= de la URL -->
     <article id="detalle-plato"></article>
   </main>
 
   <footer>
-    <!-- TODO M01: dirección, teléfono y redes -->
+    <p>Ave. Barcelo.</p>
+    <p>+1 (829)-204-0655</p>
+    <p>Facebook</p>
+    <p>Forno Rosso</p>
     <p>Forno Rosso</p>
   </footer>
 
-  <!-- El orden importa: unos archivos usan funciones de otros -->
+
   <script src="js/seguridad.js"></script>
   <script src="js/datos.js"></script>
   <script src="js/menu.js"></script>

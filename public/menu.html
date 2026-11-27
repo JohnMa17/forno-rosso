@@ -1,12 +1,5 @@
 <!DOCTYPE html>
-<!-- =============================================================================
-     FORNO ROSSO · menu.html
-     Dueño: M01 · Estructura y SEO     Rama: feature/m01-estructura
 
-     Los ids, las clases que ya trae y el data-pagina del body son CONTRATOS:
-     otros módulos los usan. No cambiarlos sin avisar al grupo.
-     Nada de <style>, style="..." ni <script> dentro del HTML (la CSP los bloquea).
-     ============================================================================= -->
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -22,7 +15,6 @@
 <body data-pagina="menu">
 
   <header>
-    <!-- TODO M01: logo -->
     <a href="index.html">Forno Rosso</a>
     <nav id="nav-principal" aria-label="Principal">
       <a href="index.html">Inicio</a>
@@ -36,7 +28,6 @@
   <main class="contenedor">
     <h1>Menú</h1>
 
-    <!-- M05 usa estos botones para filtrar. No cambiar los data-categoria. -->
     <div id="filtro-categoria">
       <button type="button" class="btn-secundario activo" data-categoria="todos">Todos</button>
       <button type="button" class="btn-secundario" data-categoria="pizzas">Pizzas</button>
@@ -44,12 +35,13 @@
       <button type="button" class="btn-secundario" data-categoria="bebidas">Bebidas</button>
     </div>
 
-    <!-- M05 pinta aquí las tarjetas de los platos -->
     <div id="grid-menu"></div>
   </main>
 
   <footer>
-    <!-- TODO M01: dirección, teléfono y redes -->
+    <p>Ave. Barcelo.</p>
+    <p>+1 (829)-204-0655</p>
+    <p>Facebook</p>
     <p>Forno Rosso</p>
   </footer>
 
