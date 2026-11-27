@@ -1,19 +1,38 @@
--- =============================================================================
---  FORNO ROSSO · db/esquema.sql
---  Dueño: M04 · Base de datos        Rama: feature/m04-base-datos
---
---  Crea las tablas de la base de datos. db.js lo ejecuta al arrancar si las
---  tablas todavía no existen.
--- =============================================================================
+--Base de dadtos, con tabla PLATOS, CLIENTE Y RESVERVAS 
+--Use el Check como parametro de seguridad final, base 3. Es lo adecuado para proteccion
+--Obliga a que se verifque 
 
--- TODO M04: tabla platos
---   id, nombre, descripcion, precio, categoria, imagen
---   precio mayor que 0 y categoria solo 'pizzas', 'pastas' o 'bebidas' (CHECK)
+model {
+  table platos {
+    id integer [pk, increment]
+    nombre varchar(255) [not null]
+    descripcion text
+    precio decimal(10, 2) [not null, check: precio > 0]
+    categoria varchar(50) [not null, check: categoria in ('pizzas', 'pastas', 'bebidas')]
+    imagen varchar(255)
+  }
 
--- TODO M04: tabla reservas
---   id (AUTOINCREMENT), nombre, telefono, correo, fecha, hora, personas,
---   comentario, creada_en (DEFAULT CURRENT_TIMESTAMP)
---   personas entre 1 y 12 (CHECK)
+  table cliente {
+    id integer [pk, increment]
+    nombre varchar(255) [not null]
+    correo varchar(255) [not null]
+    fecha date [not null]
+  }
 
--- Usa CREATE TABLE IF NOT EXISTS y NOT NULL en los campos obligatorios.
--- Usa exactamente esos nombres de columnas: el resto del equipo los usa.
+
+
+  table adminitrador {
+    id integer [pk, increment]
+    nombre varchar(255) [not null]
+    correo varchar(255) [not null]
+    contraseña varchar(255) [not null]
+  } 
+
+    table reservas {
+    id integer [pk, increment]
+    fecha date [not null]
+    hora time [not null]
+    personas integer [not null]
+    comentario text [not null]
+    creada_en timestamp [default: `CURRENT_TIMESTAMP`]
+}
