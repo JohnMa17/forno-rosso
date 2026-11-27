@@ -22,7 +22,6 @@ function sembrarDatos() {
 
   const clientes = [
     ['Ana', 'ana@gmail.com', 'cliente'],
-    ['Administración', 'admin@gmail.com', 'admin'],
   ];
 
   const insertarPlato = db.prepare(
