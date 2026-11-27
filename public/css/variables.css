@@ -1,45 +1,40 @@
-/* =============================================================================
-   FORNO ROSSO · css/variables.css
-   Dueño: M02 · Diseño               Rama: feature/m02-diseno
-
+/* 
    Todas las variables del sitio. Nadie escribe colores ni medidas sueltas:
-   todo sale de aquí. Los NOMBRES ya están acordados (los usan M03 y los demás);
-   M02 decide los VALORES. Los de abajo son provisionales.
-   ============================================================================= */
+   todo sale de aquí. 
+ */
 
 :root {
-  /* Paleta 60-30-10 (TODO M02: elegir los colores finales) */
-  --color-fondo: #ffffff;        /* 60 % neutro */
-  --color-secundario: #eeeeee;   /* 30 % */
-  --color-acento: #b3261e;       /* 10 % (botón, precios, lo importante) */
-  --color-texto: #222222;
-  --color-texto-suave: #666666;
-  --color-error: #c62828;
-  --color-exito: #2e7d32;
 
-  /* Escala de espaciado de 8 (no cambiar) */
-  --esp-1: 4px;
-  --esp-2: 8px;
-  --esp-3: 16px;
-  --esp-4: 24px;
-  --esp-5: 32px;
-  --esp-6: 48px;
-  --esp-7: 64px;
+  --color-fondo: #6a040f;        
+  --color-secundario: #EADFCB;   
+  --color-acento: #f48c06;       
+  --color-texto: #2A2018;
+  --color-error: #ff0000;
+  --color-exito: #1d6320;
 
-  /* Tipografía: máximo 2 fuentes (TODO M02: elegirlas) */
-  --fuente-titulos: system-ui, sans-serif;
-  --fuente-cuerpo: system-ui, sans-serif;
 
-  /* Escala tipográfica, razón 1.25 desde 16px (TODO M02: revisar) */
-  --texto-sm: 13px;
-  --texto-base: 16px;
-  --texto-md: 20px;
-  --texto-lg: 25px;
-  --texto-xl: 31px;
-  --texto-xxl: 39px;
+  --espaciado-1: 4px;
+  --espaciado-2: 8px;
+  --espaciado-3: 16px;
+  --espaciado-4: 24px;
+  --espaciado-5: 32px;
+  --espaciado-6: 48px;
+  --espaciado-7: 64px;
 
-  /* Bordes y ancho máximo */
-  --radio: 8px;
+
+  --fuente-titulos: serif;
+  --fuente-cuerpo: serif;
+
+
+  --notas: 13px;
+  --cuerpo-base: 16px;
+  --subtitulo: 20px;
+  --titulo-3: 25px;
+  --titulo-2: 31px;
+  --titulo-1: 39px;
+
+
+  --radio: 12px;
   --ancho-max: 1080px;
 }
 
