@@ -9,12 +9,48 @@ body {
 }
 
 
-.h1 {
-   font-family: var(--fuente-titulos);
+.h1 { 
+      font-size: var(--titulo-1);
+      font-family: var(--fuente-titulos);
+      gap: var(--espaciado-3);
+}
+
+.h2 { 
+      font-size: var(--titulo-3);
+      font-family: var(--fuente-titulos);
+      gap: var(--espaciado-3);
 }
 
 
-/* TODO M02:
-   - títulos h1, h2, h3 con la escala tipográfica y --fuente-titulos
-   - enlaces
-   - .btn y .btn-secundario con :hover, :focus-visible y :disabled */
+.h3 { 
+      font-size: var(--cuerpo-base);
+      font-family: var(--fuente-titulos);
+      gap: var(--espaciado-3);
+}
+
+.btn {
+   display: inline-block;
+   padding: var(--espaciado-2) var(--espaciado-4);
+   font-size: var(--cuerpo-base);
+   font-family: var(--fuente-cuerpo);
+   color: var(--color-fondo);
+   background-color: var(--color-acento);
+   border-radius: var(--radio);
+   transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: var(--color-secundario);
+}
+
+.btn-secundario {
+  display: inline-block;
+  padding: var(--espaciado-2) var(--espaciado-4);
+  font-size: var(--cuerpo-base);
+  font-family: var(--fuente-cuerpo);
+  color: var(--color-fondo);
+  background-color: var(--color-secundario);
+  border-radius: var(--radio);
+  transition: background-color 0.3s ease;
+}

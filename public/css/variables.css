@@ -4,10 +4,9 @@
  */
 
 :root {
-
-  --color-fondo: #6a040f;        
-  --color-secundario: #EADFCB;   
-  --color-acento: #f48c06;       
+  --color-fondo: #F6F1E7;        
+  --color-secundario: #3b060a; 
+  --color-acento: #ebb33b;       
   --color-texto: #2A2018;
   --color-error: #ff0000;
   --color-exito: #1d6320;
