@@ -7,15 +7,13 @@
 // =============================================================================
 
 function cabecerasSeguras(req, res, next) {
-  // TODO M08: agregar estas cabeceras con res.setHeader(nombre, valor):
-  //   - Content-Security-Policy: solo recursos propios ('self') y, en connect-src,
-  //     la API del clima (https://api.open-meteo.com). Sin scripts en línea.
-  //   - X-Frame-Options: DENY
-  //   - X-Content-Type-Options: nosniff
-  //   - Referrer-Policy: strict-origin-when-cross-origin
-  //
-  // Actívalas cuando todo lo demás ya funcione (punto de control 3) y revisa
-  // en F12 > Red que aparezcan sin romper nada.
+  res.setHeader(
+    'Content-Security-Policy',
+    "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://api.open-meteo.com; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
+  );
+  res.setHeader('X-Frame-Options', 'DENY');
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+  res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
 
   next();
 }
