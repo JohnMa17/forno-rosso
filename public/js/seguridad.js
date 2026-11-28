@@ -16,53 +16,122 @@
 //    comentario  hasta 200 caracteres
 // =============================================================================
 
-/** Quita espacios de los extremos y corta al largo máximo. */
 function limpiarTexto(texto, max = 200) {
-  // TODO M08
-  return String(texto ?? "");
+  return typeof texto === 'string' &&
+         texto.length > 0 &&
+         texto.length <= max;
 }
 
+
 function esNombreValido(valor) {
-  // TODO M08
+  const invalidChars = [' ', '!', '#', '$', '%', '&', '*', '(', ')', '+', ',', '/', ':', ';', '<', '=', '>', '?', '[', '\\', ']', '^', '`', '{', '|', '}', '~'];
+  for (let char of invalidChars) {
+    if (valor.includes(char)) {
+      return false;
+    }
   return true;
 }
 
 function esTelefonoValido(valor) {
-  // TODO M08
-  return true;
+
+  const invalidChars = [' ', '!', '#', '$', '%', '&', '*', '(', ')', '+', ',', '/', ':', ';', '<', '=', '>', '?', '[', '\\', ']', '^', '`', '{', '|', '}', '~'];
+  for (let char of invalidChars) {
+    if (valor.includes(char)) {
+      return false;
+    }
+  if (valor=10){return true;
+  }else { 
+    return false;
+  }
 }
 
 function esCorreoValido(valor) {
-  // TODO M08
+  // Verificamos si el email contiene el símbolo '@' 
+  // y la @ no está al inicio ni al final
+  const atIndex = valor.indexOf('@');
+  if (atIndex <= 0 || atIndex === valor.length - 1) {
+    return false;
+  }
+
+  // Dividimos el email usando la '@' como separador
+  const [local, domain] = valor.split('@');
+  // Ese código genera dos constantes 
+  // - local, con la parte de antes de la @
+  // -- domain, con la parte de después de la arroba
+
+  // Comprobamos si alguna de las partes está vacía
+  if (!local || !domain) {
+    return false;
+  }
+
+  // Verificamos que el dominio contenga un punto y no esté al inicio ni al final
+  const dotIndex = domain.indexOf('.');
+  if (dotIndex <= 0 || dotIndex === domain.length - 1) {
+    return false;
+  }
+
+  // Comprobamos que el dominio no tenga más de un punto consecutivo
+  if (domain.includes('..')) {
+    return false;
+  }
+
+  // Comprobamos que el email no contenga caracteres inválidos 
+  // Estos caracteres inválidos podrían extenderse si lo ves necesario
+  const invalidChars = [' ', '!', '#', '$', '%', '&', '*', '(', ')', '+', ',', '/', ':', ';', '<', '=', '>', '?', '[', '\\', ']', '^', '`', '{', '|', '}', '~'];
+  for (let char of invalidChars) {
+    if (valor.includes(char)) {
+      return false;
+    }
+  }
+
+  // Si estamos aquí es que todas las comprobaciones anteriores fueron correctas
   return true;
 }
 
 function esFechaValida(valor) {
-  // TODO M08
-  return true;
+  var RegExPattern = /^\d{1,2}\/\d{1,2}\/\d{2,4}$/;
+      if ((campo.match(RegExPattern)) && (campo!='')) {
+            return true;
+      } else {
+            return false;
+      }
 }
 
 function esHoraValida(valor) {
-  // TODO M08
+  var RegExPattern = /^(0[1-9]|1\d|2[0-3]):([0-5]\d):([0-5]\d)$/;
+      if ((campo.match(RegExPattern)) && (campo!='')) {
+            return true;
+      } else {
+            return false;
+      }
   return true;
 }
+
 
 function esPersonasValido(valor) {
-  // TODO M08
-  return true;
+if (.isInteger(valor) && valor >= 1 && numero <= 12) {
+    return true;
+  } else{
+  retun false;}
+  retun true;
 }
 
-/**
- * Lee el ?id= de la URL (plato.html?id=3).
- * Devuelve el número si es un entero del 1 al 6; si no, null.
- */
 function leerIdDeUrl() {
-  // TODO M08: validar que sea un entero del 1 al 6 (hoy acepta cualquier cosa)
   const valor = new URLSearchParams(window.location.search).get("id");
-  return valor === null ? null : Number(valor);
+  
+  // Si no existe o es una cadena vacía, devolvemos null
+  if (!valor || valor.trim() === "") return null;
+
+  const numero = Number(valor);
+
+  if (Number.isInteger(numero) && numero >= 1 && numero <= 6) {
+    return numero;
+  }
+
+  return null;
 }
 
-// Para que el servidor (Node) también pueda usar este archivo. No borrar.
+
 if (typeof module !== "undefined") {
   module.exports = {
     limpiarTexto, esNombreValido, esTelefonoValido, esCorreoValido,
